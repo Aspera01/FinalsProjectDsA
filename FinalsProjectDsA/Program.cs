@@ -59,8 +59,11 @@ namespace FinalsProjectDsA
                 for (int y = 0; y < mainLett.GetLength(1); y++)
                 {
                     mainLett[x, y] = shiftLett[y];
+                    Console.Write(mainLett[x,y] + " ");
+                    
                 }
-
+                Console.Write("\n");
+                Console.ReadKey();
             }
 
             while (!pass)
