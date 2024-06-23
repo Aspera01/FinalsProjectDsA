@@ -26,9 +26,10 @@ namespace FinalsProjectDsA
             string keymessage = "";
             string message = ""; 
             bool pass = false;
-            bool finish = false; 
+            bool finish = false;
 
-
+            Console.WriteLine("Press any button to start.");
+            Console.ReadKey();
             for (int x = 0; x < mainLett.GetLength(0); x++)
             {
                 //shifting part
@@ -63,7 +64,7 @@ namespace FinalsProjectDsA
                     
                 }
                 Console.Write("\n");
-                Console.ReadKey();
+                Thread.Sleep(100);
             }
 
             while (!pass)
@@ -180,7 +181,13 @@ namespace FinalsProjectDsA
                         foreach (string m in enmessage)
                             sw.Write(m);
                     }
-                    Console.Write("Message encrypted");
+                    Console.WriteLine("The keymask: ");
+                    foreach (string km in keymask)
+                        Console.Write(km);
+                    Console.WriteLine("\nThe encoded message is: ");
+                    foreach (string m in enmessage)
+                        Console.Write(m);
+                    Console.Write("\nMessage encrypted");
                     Console.ReadKey();
 
                 }
@@ -289,6 +296,7 @@ namespace FinalsProjectDsA
                             b++;
                         }
 
+
                         int xside = 0;
                         int yside = 0;
                         for (int z = 0; z < message.Length; z++)
@@ -317,7 +325,13 @@ namespace FinalsProjectDsA
                             foreach (string m in enmessage)
                                 sw.Write(m);
                         }
-                        Console.Write("Message Decrypted");
+                        //Console.WriteLine("The keymask: ");
+                        //foreach (string km in keymask)
+                        //    Console.Write(km);
+                        //Console.WriteLine("\nThe Decoded message is: ");
+                        //foreach (string m in enmessage)
+                        //    Console.Write(m);
+                        Console.Write("\nMessage Decrypted");
                         Console.ReadKey();
                     }
                 }
